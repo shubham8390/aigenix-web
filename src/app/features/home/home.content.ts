@@ -37,8 +37,6 @@ export interface InsightsGalleryImage {
 export interface InsightsContent {
   title: string;
   description: string;
-  referenceLabel: string;
-  referenceHref: string;
   gallery: readonly InsightsGalleryImage[];
 }
 
@@ -84,8 +82,6 @@ export interface FounderProgramCard {
 }
 
 export interface FounderProgramsContent {
-  layoutNote: string;
-  layoutHref: string;
   headline: string;
   sectionTitle: string;
   belief: string;
@@ -155,8 +151,6 @@ export const HOME_CONTENT: HomeContent = {
     title: 'AiGenix insights',
     description:
       'Subscribe to the latest AiGenix insights on the topics you care about — agentic systems, enterprise adoption, and responsible scale.',
-    referenceLabel: 'Editorial reference — McKinsey insights layout',
-    referenceHref: 'https://www.mckinsey.com/',
     gallery: [
       {
         src: BrandAssets.researchPaper1,
@@ -214,8 +208,6 @@ export const HOME_CONTENT: HomeContent = {
     ],
   },
   founderPrograms: {
-    layoutNote: 'Layout pattern reference — Harvard Business School MBA',
-    layoutHref: 'https://www.hbs.edu/mba',
     headline: 'We help founders build ventures that make a lasting difference.',
     sectionTitle: 'We help founders at any level',
     belief:

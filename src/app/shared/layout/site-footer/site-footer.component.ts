@@ -84,23 +84,6 @@ import { PRIMARY_NAV } from '../../navigation';
                 <app-social-icon platform="instagram" />
               </a>
             </div>
-            <p class="mt-5 text-xs leading-relaxed text-muted">
-              Layout references:
-              <a
-                class="text-brand underline-offset-2 hover:underline"
-                href="https://www.hbs.edu/mba"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Harvard Business School</a
-              >,
-              <a
-                class="text-brand underline-offset-2 hover:underline"
-                href="https://www.mckinsey.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >McKinsey</a
-              >.
-            </p>
           </div>
         </div>
 

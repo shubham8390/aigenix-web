@@ -9,18 +9,7 @@ import type { FounderProgramsContent } from './home.content';
   template: `
     <section id="founder-programs" class="border-y border-border bg-background py-16 md:py-24" aria-labelledby="founder-programs-heading">
       <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        <p class="text-sm text-muted">
-          <a
-            class="font-medium text-brand underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
-            [href]="content().layoutHref"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ content().layoutNote }}
-          </a>
-        </p>
-
-        <p class="mt-6 text-xl font-semibold text-foreground md:text-2xl">
+        <p class="text-xl font-semibold text-foreground md:text-2xl">
           {{ content().headline }}
         </p>
 

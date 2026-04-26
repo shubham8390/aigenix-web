@@ -17,16 +17,6 @@ import type { InsightsContent } from './home.content';
           [title]="content().title"
           [subtitle]="content().description"
         />
-        <p class="mt-6 max-w-3xl text-sm text-muted">
-          <a
-            class="font-medium text-brand underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
-            [href]="content().referenceHref"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ content().referenceLabel }}
-          </a>
-        </p>
 
         <div class="mt-10 grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-12">
           <div class="flex flex-col gap-4">

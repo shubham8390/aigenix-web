@@ -55,6 +55,11 @@ export const routes: Routes = [
           description: 'Articles, research, and tools from AiGenix — library coming soon.',
         },
       },
+      {
+        path: 'case-study',
+        loadComponent: () =>
+          import('./features/case-study/case-study-page.component').then((m) => m.CaseStudyPageComponent),
+      },
     ],
   },
   { path: '**', redirectTo: '' },

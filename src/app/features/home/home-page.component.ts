@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { SeoService } from '../../core/seo.service';
 import { HOME_CONTENT } from './home.content';
+import { CaseStudyTilesSectionComponent } from './case-study-tiles-section.component';
 import { HeroSectionComponent } from './hero-section.component';
-import { CaseStudySectionComponent } from './case-study-section.component';
 import { InsightsNewsletterSectionComponent } from './insights-newsletter-section.component';
 import { FoundersTalkSectionComponent } from './founders-talk-section.component';
 import { WhatWeDoSectionComponent } from './what-we-do-section.component';
@@ -14,7 +14,7 @@ import { CareersTeaserSectionComponent } from './careers-teaser-section.componen
   standalone: true,
   imports: [
     HeroSectionComponent,
-    CaseStudySectionComponent,
+    CaseStudyTilesSectionComponent,
     InsightsNewsletterSectionComponent,
     FoundersTalkSectionComponent,
     WhatWeDoSectionComponent,
@@ -22,8 +22,8 @@ import { CareersTeaserSectionComponent } from './careers-teaser-section.componen
     CareersTeaserSectionComponent,
   ],
   template: `
-    <app-hero-section [content]="content.hero" />
-    <app-case-study-section [content]="content.caseStudy" />
+    <app-hero-section [hero]="content.hero" [caseStudy]="content.caseStudy" />
+    <app-case-study-tiles-section [tiles]="content.caseStudyTiles" />
     <app-insights-newsletter-section [content]="content.insights" />
     <app-founders-talk-section [content]="content.foundersTalk" />
     <app-what-we-do-section [content]="content.whatWeDo" />

@@ -3,11 +3,11 @@ import { BrandAssets } from '../../shared/brand-assets';
 export interface HeroContent {
   title: string;
   subtitle: string;
-  imageSrc: string;
-  imageAlt: string;
 }
 
 export interface CaseStudyContent {
+  /** Route to the full case study article (hero teaser links here). */
+  detailRoute: string;
   eyebrow: string;
   title: string;
   clientProfile: string;
@@ -27,6 +27,14 @@ export interface CaseStudyContent {
   demonstratesClosing: string;
   imageSrc: string;
   imageAlt: string;
+}
+
+/** Teaser tiles on the home page; each links to the main case study page. */
+export interface CaseStudyHomeTile {
+  title: string;
+  imageSrc: string;
+  imageAlt: string;
+  linkPath: string;
 }
 
 export interface InsightsGalleryImage {
@@ -94,6 +102,8 @@ export interface FounderProgramsContent {
 export interface HomeContent {
   hero: HeroContent;
   caseStudy: CaseStudyContent;
+  /** 2–3 tiles shown below the hero; all navigate to {@link CaseStudyContent.detailRoute}. */
+  caseStudyTiles: readonly CaseStudyHomeTile[];
   insights: InsightsContent;
   foundersTalk: FoundersTalkContent;
   whatWeDo: WhatWeDoContent;
@@ -106,10 +116,9 @@ export const HOME_CONTENT: HomeContent = {
     title: 'What will move you forward?',
     subtitle:
       'Work that matters. Growth that lasts. At AiGenix, we help you think bigger, build stronger, and expand opportunity for all.',
-    imageSrc: BrandAssets.heroPrimary,
-    imageAlt: 'AiGenix — technology and people shaping the future of work',
   },
   caseStudy: {
+    detailRoute: '/case-study',
     eyebrow: 'Case study',
     title: 'Enabling agentic transformation in a service-based IT enterprise',
     clientProfile:
@@ -147,6 +156,26 @@ export const HOME_CONTENT: HomeContent = {
     imageSrc: BrandAssets.caseStudyImage,
     imageAlt: 'Human and AI reaching together — partnership between people and intelligent systems',
   },
+  caseStudyTiles: [
+    {
+      title: 'Agentic transformation in a service-based IT enterprise',
+      imageSrc: BrandAssets.heroPrimary,
+      imageAlt: 'AiGenix — technology and people shaping the future of work',
+      linkPath: '/case-study',
+    },
+    {
+      title: 'Enterprise adoption and responsible scale',
+      imageSrc: BrandAssets.researchPaper1,
+      imageAlt: 'Research and analysis on enterprise AI adoption',
+      linkPath: '/case-study',
+    },
+    {
+      title: 'Partnership between people and intelligent systems',
+      imageSrc: BrandAssets.caseStudyImage,
+      imageAlt: 'Human and AI reaching together',
+      linkPath: '/case-study',
+    },
+  ],
   insights: {
     title: 'AiGenix insights',
     description:
